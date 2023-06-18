@@ -16,6 +16,11 @@
 //throw new Exception(''); // 500
 
 $name = $_GET['name'] ?? " John doe";
+
+//some dump sample.
+//file_put_contents('dump', serialize($_GET));
+//$_GET = unserialize(file_get_contents('dump'));
+
 $dt = new DateTimeImmutable("now", new DateTimeZone('Asia/Tokyo'));
 echo htmlspecialchars(
     "hello {$name}, it's {$dt->format('Y-m-d H:i:s')}",
