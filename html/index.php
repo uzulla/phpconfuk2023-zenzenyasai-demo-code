@@ -23,7 +23,7 @@ $name = $_GET['name'] ?? " John doe";
 
 $dt = new DateTimeImmutable("now", new DateTimeZone('Asia/Tokyo'));
 echo htmlspecialchars(
-    "hello {$name}, it's {$dt->format('Y-m-d H:i:s')}",
+    "hello {$name}, it's {$dt->format('Y-m-d H:i:s')}" . PHP_EOL,
     ENT_QUOTES,
     'UTF-8'
 );
