@@ -5,8 +5,6 @@
 // http://localhost/index.php?XDEBUG_TRIGGER
 // http://localhost/?name=some&XDEBUG_TRIGGER
 
-session_start();
-
 //register_shutdown_function(function () {
 //    $error = error_get_last();
 //});
@@ -18,5 +16,10 @@ session_start();
 //throw new Exception(''); // 500
 
 $name = $_GET['name'] ?? " John doe";
-echo htmlspecialchars("hello {$name}", ENT_QUOTES, 'UTF-8');
+$dt = new DateTimeImmutable("now", new DateTimeZone('Asia/Tokyo'));
+echo htmlspecialchars(
+    "hello {$name}, it's {$dt->format('Y-m-d H:i:s')}",
+    ENT_QUOTES,
+    'UTF-8'
+);
 
