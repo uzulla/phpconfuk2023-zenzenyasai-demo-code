@@ -1,9 +1,9 @@
 <?php
 // http://localhost/phpinfo.php
 // http://localhost/xdebug_info.php
-// http://localhost/index.php
-// http://localhost/index.php?XDEBUG_TRIGGER
-// http://localhost/?name=some&XDEBUG_TRIGGER
+// http://localhost/
+// http://localhost/hello/fukuoka?XDEBUG_TRIGGER
+// http://localhost/clock&XDEBUG_TRIGGER
 
 //register_shutdown_function(function () {
 //    $error = error_get_last();
